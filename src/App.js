@@ -48,12 +48,12 @@ function AppContent() {
   const location = useLocation();
 
   // Định nghĩa các route không hiển thị navbar
-  const hideNavbarRoutes = ['/landlord', '/homeadmin', '/register', '/login', '/verify', '/forgot-password', '/reset-password', '/verifycode'];
+  // Một số route cần so sánh exact (ví dụ '/register') để tránh ẩn sai cho '/register-direct'
+  const hideNavbarExact = ['/register', '/login', '/verify', '/forgot-password', '/reset-password', '/verifycode'];
+  const hideNavbarPrefix = ['/landlord', '/homeadmin'];
 
   // Kiểm tra có nên hiển thị navbar không
-  const shouldShowNavbar = !hideNavbarRoutes.some(route =>
-    location.pathname.startsWith(route)
-  );
+  const shouldShowNavbar = !(hideNavbarExact.includes(location.pathname) || hideNavbarPrefix.some(route => location.pathname.startsWith(route)));
 
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
