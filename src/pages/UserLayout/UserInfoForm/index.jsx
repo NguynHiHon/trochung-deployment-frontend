@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { jwtDecode } from "jwt-decode";
+import { decodeJwt } from '../../../utils/jwtHelper';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   Box,
@@ -113,7 +113,7 @@ const UserInfoForms = () => {
   // Nút xem token payload
   const handleShowTokenPayload = () => {
     if (accessToken) {
-      const payload = jwtDecode(accessToken);
+  const payload = decodeJwt(accessToken);
       setTokenPayload(payload);
     } else {
       setTokenPayload("Không tìm thấy accessToken trong Redux!");

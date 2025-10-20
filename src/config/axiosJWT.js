@@ -1,5 +1,5 @@
 import axios from 'axios';
-import jwtDecode from 'jwt-decode';
+import { decodeJwt } from '../utils/jwtHelper';
 import store from '../redux/store';
 import { loginSuccess } from '../redux/slices/authSlice';
 
@@ -41,7 +41,7 @@ axiosJWT.interceptors.request.use(async (config) => {
   if (accessToken) {
     try {
       // Giải mã token để lấy thời gian hết hạn
-      const token = jwtDecode(accessToken);
+  const token = decodeJwt(accessToken);
       const currentTime = Date.now() / 1000;
       const isExpired = token.exp < currentTime;
 
