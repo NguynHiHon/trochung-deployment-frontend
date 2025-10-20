@@ -1,0 +1,388 @@
+.home-landing {
+    padding-bottom: 64px;
+}
+
+.home-landing .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+.page-header {
+    text-align: center;
+    margin: 16px 0 24px;
+}
+
+.breadcrumbs {
+    color: #9aa0a6;
+    font-size: 12px;
+    margin-bottom: 6px;
+}
+
+.page-header h2 {
+    margin: 8px 0;
+    font-weight: 700;
+}
+
+.searchbar {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.searchbar input {
+    width: 360px;
+    max-width: 90%;
+    padding: 10px 14px;
+    border-radius: 20px;
+    border: 1px solid #d0d7de;
+}
+
+.subtitle {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+/* Hero */
+.hero {
+    margin: 24px 0 12px;
+}
+
+.ph {
+    background: #d4d4d4;
+    height: 260px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #111;
+    font-weight: 700;
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: 40px;
+}
+
+.dots {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 2px solid #111;
+    margin: 0 6px;
+}
+
+.dot.active {
+    background: #111;
+}
+
+/* Featured */
+.section-title {
+    font-weight: 700;
+    margin: 24px 0 12px;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, .06);
+    overflow: hidden;
+    border: 1px solid #ececec;
+}
+
+.card .ph {
+    height: 200px;
+    border-radius: 0;
+}
+
+.card-body {
+    padding: 14px;
+}
+
+.card-meta {
+    display: flex;
+    justify-content: space-between;
+    color: #9aa0a6;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.btn {
+    background: #111;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+/* Rows */
+.row-section {
+    margin-top: 18px;
+}
+
+.row-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.row-card .ph {
+    height: 190px;
+}
+
+.price-label {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, .7);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.row-card {
+    position: relative;
+}
+
+.info-block {
+    max-width: 480px;
+    margin-top: 10px;
+}
+
+.info-block h4 {
+    margin: 8px 0;
+}
+
+.info-block p {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+/* Areas */
+.areas-wrap {
+    display: grid;
+    grid-template-columns: 40px repeat(4, 1fr) 40px;
+    align-items: center;
+    gap: 12px;
+}
+
+.area-item .ph {
+    height: 180px;
+}
+
+.badge {
+    background: #efefef;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.nav {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+@media (max-width: 900px) {
+
+    .grid-3,
+    .row-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .areas-wrap {
+        grid-template-columns: 40px 1fr 40px;
+    }
+}
+
+/* --- Animated Area Carousel --- */
+.areas-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+}
+
+.areas-track-wrapper {
+    overflow: hidden;
+    width: 80%;
+    max-width: 900px;
+}
+
+.areas-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    /* hiệu ứng trượt mượt */
+}
+
+.area-item {
+    flex: 0 0 calc(25% - 10px);
+    /* 4 items hiển thị mỗi lần */
+    margin: 0 5px;
+    border-radius: 8px;
+    background: #d4d4d4;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav {
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s;
+}
+
+.nav:hover {
+    opacity: 0.8;
+    transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .area-item {
+        flex: 0 0 100%;
+    }
+}
+
+/* --- HERO CAROUSEL --- */
+.hero-slider-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-slider {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+    width: 100%;
+}
+
+.hero-slider .ph {
+    flex: 0 0 100%;
+    min-width: 100%;
+    background: #d4d4d4;
+    height: 260px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #111;
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.hero .nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    cursor: pointer;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    transition: background 0.3s ease;
+}
+
+.hero .nav:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.hero .nav.prev {
+    left: 10px;
+}
+
+.hero .nav.next {
+    right: 10px;
+}
+
+/* --- Dots --- */
+.dots {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 2px solid #111;
+    margin: 0 6px;
+    cursor: pointer;
+}
+
+.dot.active {
+    background: #111;
+}
+
+/* --- Grid layout --- */
+.grid-featured {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.grid-small {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+/* --- Kích thước card khác nhau --- */
+.featured .card {
+    transform: scale(1.05);
+    font-size: 1.05rem;
+}
+
+.latest .card,
+.emergency .card {
+    transform: scale(0.95);
+    font-size: 0.9rem;
+}
+
+.card {
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}

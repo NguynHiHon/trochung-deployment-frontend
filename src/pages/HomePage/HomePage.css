@@ -1,0 +1,76 @@
+.home-container{
+    display: flex;
+    background-color: rgb(236, 235, 235);
+    height:600px;
+    width:60%;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 3rem;
+}
+.home-title{
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.home-userlist{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.home-user{
+    margin: 1.5rem;
+    background-color: rgb(194, 194, 194);
+    padding:0.5rem;
+    border-radius: 12px;
+}
+.home-role{
+    margin-top: 1rem;
+    font-size: 1.25rem;
+}
+
+.user-container{
+    display: flex;
+    width: 200px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.delete-user{
+    cursor: pointer;
+    font-size: 1rem;
+    background-color: rgb(240, 34, 96);
+    padding:0.35rem;
+    border-radius: 12px;
+    color:white;
+}
+.delete-user:hover{
+    background-color:rgb(207, 18, 75) ;
+}
+
+/* Message styles */
+.message {
+    padding: 10px 15px;
+    margin: 10px 0;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.message.info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+    border: 1px solid #bee5eb;
+}

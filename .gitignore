@@ -1,0 +1,31 @@
+# Node
+node_modules/
+
+# Next/React builds
+.next/
+build/
+dist/
+
+# Yarn
+yarn.lock
+.yarn/
+.yarnrc.yml
+
+# Env files
+.env
+.env.*
+
+# Editor/OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Static uploads
+uploads/
+
+# Local test data
+src/TestData/
