@@ -41,6 +41,7 @@ import { ToastProvider } from "./Components/ToastProvider";
 import PostEdit from './pages/PostEdit/PostEdit';
 import InviteRooms from './pages/InviteRooms/InviteRooms';
 import InviteDetail from './pages/InviteDetail/InviteDetail';
+import RegisterDirect from "./pages/Auth/RegisterDirect";
 
 // Component con để sử dụng useLocation hook
 function AppContent() {
@@ -75,6 +76,7 @@ function AppContent() {
           <Route path="/favorites" element={<FavoritesPage />} />
           <Route path="/room/:id" element={<RoomDetailPage />} />
           <Route path="/room/:id/reviews" element={<RoomReviewsPage />} />
+         <Route path="/register-direct" element={<RegisterDirect/>} />
 
           {/* Admin routes */}
           <Route path="/admin" element={<AdminLayout />}>
