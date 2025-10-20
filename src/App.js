@@ -76,7 +76,7 @@ function AppContent() {
           <Route path="/favorites" element={<FavoritesPage />} />
           <Route path="/room/:id" element={<RoomDetailPage />} />
           <Route path="/room/:id/reviews" element={<RoomReviewsPage />} />
-         <Route path="/register-direct" element={<RegisterDirect/>} />
+          <Route path="/register-direct" element={<RegisterDirect />} />
 
           {/* Admin routes */}
           <Route path="/admin" element={<AdminLayout />}>
