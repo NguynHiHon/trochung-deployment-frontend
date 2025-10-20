@@ -17,6 +17,7 @@ const UserLayout = () => {
   useEffect(() => {
     // If user is not logged in, redirect to login page
     if (!isLoggedIn) {
+      console.debug('[UserLayout] redirecting to /login | isLoggedIn=false | loginState=', login);
       navigate('/login', { replace: true });
     }
   }, [isLoggedIn, navigate]);

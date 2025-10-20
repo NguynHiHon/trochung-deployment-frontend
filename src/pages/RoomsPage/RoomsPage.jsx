@@ -155,11 +155,15 @@ const RoomsPage = () => {
   useEffect(() => {
     (async () => {
       try {
+        console.debug('[RoomsPage] loading favorites');
         const res = await FavoriteApi.getMyFavorites();
+        console.debug('[RoomsPage] favorites response', res && (res.favorites || []).length);
         const ids = (res?.favorites || []).map(f => String(f.room?._id || f.clientRoomId || f.room));
         setFavorites(new Set(ids));
         localStorage.setItem('favoriteRoomIds', JSON.stringify(ids));
-      } catch (_) {}
+      } catch (e) {
+        console.error('[RoomsPage] failed to load favorites:', e?.message || e);
+      }
     })();
   }, []);
 
